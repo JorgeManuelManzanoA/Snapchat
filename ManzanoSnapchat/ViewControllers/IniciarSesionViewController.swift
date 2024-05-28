@@ -9,6 +9,7 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
+import FirebaseDatabase
 
 class IniciarSesionViewController: UIViewController {
 
@@ -23,10 +24,19 @@ class IniciarSesionViewController: UIViewController {
     @IBAction func iniciarSesionTapped(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             print("Intentando Iniciar Sesion")
-            if error != nil {
-                print("Se presento el siguiente error \(error)")
+            if let error = error {
+                print("Se presentó el siguiente error: \(error)")
+                let alerta = UIAlertController(title: "Error al iniciar sesión", message: "Este usuario no se encuentra registrado en la base de datos", preferredStyle: .alert)
+                let btnOk = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+                let btnRegistrar = UIAlertAction(title: "Crear usuario", style: .default) { (action) in
+                    self.performSegue(withIdentifier: "registrarUsuarioSegue", sender: nil)
+                }
+                alerta.addAction(btnRegistrar)
+                alerta.addAction(btnOk)
+                self.present(alerta, animated: true, completion: nil)
             } else {
-                print("Inicio de sesion exitoso")
+                print("Inicio de sesión exitoso")
+                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
             }
         }
     }
@@ -53,10 +63,10 @@ class IniciarSesionViewController: UIViewController {
             Auth.auth().signIn(with: credential) { (authResult, error) in
                 print("Intentando Iniciar Sesion en Google")
                 if let error = error {
-                    print("Error iniciando sesion en Google: \(error)")
+                    print("Error iniciando sesión en Google: \(error)")
                     return
                 }
-                print("Inicio de sesion con Google exitoso")
+                print("Inicio de sesión con Google exitoso")
             }
         }
     }

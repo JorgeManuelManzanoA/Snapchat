@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C4315BD2C0538B000CA10C8 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4315BC2C0538B000CA10C8 /* SnapsViewController.swift */; };
+		8C4315BF2C053DA600CA10C8 /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4315BE2C053DA600CA10C8 /* ImagenViewController.swift */; };
+		8C4315C12C054BB400CA10C8 /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4315C02C054BB400CA10C8 /* ElegirUsuarioViewController.swift */; };
+		8C4315C52C05504C00CA10C8 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4315C42C05504C00CA10C8 /* Usuario.swift */; };
+		8C4315C72C05559900CA10C8 /* RegistrarUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4315C62C05559900CA10C8 /* RegistrarUsuarioViewController.swift */; };
 		8CAFBAFC2BFBF79100977A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFBAFB2BFBF79100977A0E /* AppDelegate.swift */; };
 		8CAFBAFE2BFBF79100977A0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFBAFD2BFBF79100977A0E /* SceneDelegate.swift */; };
 		8CAFBB032BFBF79100977A0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAFBB012BFBF79100977A0E /* Main.storyboard */; };
@@ -46,6 +51,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C4315BC2C0538B000CA10C8 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		8C4315BE2C053DA600CA10C8 /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
+		8C4315C02C054BB400CA10C8 /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
+		8C4315C42C05504C00CA10C8 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		8C4315C62C05559900CA10C8 /* RegistrarUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarUsuarioViewController.swift; sourceTree = "<group>"; };
 		8CAFBAF82BFBF79100977A0E /* ManzanoSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManzanoSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAFBAFB2BFBF79100977A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CAFBAFD2BFBF79100977A0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +107,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C4315C22C05501000CA10C8 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				8C4315C42C05504C00CA10C8 /* Usuario.swift */,
+			);
+			path = Modelos;
+			sourceTree = "<group>";
+		};
+		8C4315C32C05502000CA10C8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CAFBB482BFC06E700977A0E /* IniciarSesionViewController.swift */,
+				8C4315BC2C0538B000CA10C8 /* SnapsViewController.swift */,
+				8C4315BE2C053DA600CA10C8 /* ImagenViewController.swift */,
+				8C4315C02C054BB400CA10C8 /* ElegirUsuarioViewController.swift */,
+				8C4315C62C05559900CA10C8 /* RegistrarUsuarioViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		8CAFBAEF2BFBF79100977A0E = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +146,8 @@
 		8CAFBAFA2BFBF79100977A0E /* ManzanoSnapchat */ = {
 			isa = PBXGroup;
 			children = (
+				8C4315C32C05502000CA10C8 /* ViewControllers */,
+				8C4315C22C05501000CA10C8 /* Modelos */,
 				8CAFBB512BFC0EFC00977A0E /* GoogleService-Info.plist */,
 				8CAFBAFB2BFBF79100977A0E /* AppDelegate.swift */,
 				8CAFBAFD2BFBF79100977A0E /* SceneDelegate.swift */,
@@ -123,7 +155,6 @@
 				8CAFBB042BFBF79200977A0E /* Assets.xcassets */,
 				8CAFBB062BFBF79200977A0E /* LaunchScreen.storyboard */,
 				8CAFBB092BFBF79200977A0E /* Info.plist */,
-				8CAFBB482BFC06E700977A0E /* IniciarSesionViewController.swift */,
 			);
 			path = ManzanoSnapchat;
 			sourceTree = "<group>";
@@ -235,9 +266,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C4315BD2C0538B000CA10C8 /* SnapsViewController.swift in Sources */,
+				8C4315C72C05559900CA10C8 /* RegistrarUsuarioViewController.swift in Sources */,
+				8C4315BF2C053DA600CA10C8 /* ImagenViewController.swift in Sources */,
+				8C4315C52C05504C00CA10C8 /* Usuario.swift in Sources */,
 				8CAFBB492BFC06E700977A0E /* IniciarSesionViewController.swift in Sources */,
 				8CAFBAFC2BFBF79100977A0E /* AppDelegate.swift in Sources */,
 				8CAFBAFE2BFBF79100977A0E /* SceneDelegate.swift in Sources */,
+				8C4315C12C054BB400CA10C8 /* ElegirUsuarioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,8 +418,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ManzanoSnapchat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -398,6 +436,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.miempresa.ManzanoSnapchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,8 +448,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ManzanoSnapchat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -425,6 +466,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.miempresa.ManzanoSnapchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
