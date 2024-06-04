@@ -12,6 +12,10 @@
 		8C4315C12C054BB400CA10C8 /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4315C02C054BB400CA10C8 /* ElegirUsuarioViewController.swift */; };
 		8C4315C52C05504C00CA10C8 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4315C42C05504C00CA10C8 /* Usuario.swift */; };
 		8C4315C72C05559900CA10C8 /* RegistrarUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4315C62C05559900CA10C8 /* RegistrarUsuarioViewController.swift */; };
+		8C6675AF2C0E7484003EA7F5 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6675AE2C0E7484003EA7F5 /* Snap.swift */; };
+		8C6675B12C0E7960003EA7F5 /* VerSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6675B02C0E7960003EA7F5 /* VerSnapViewController.swift */; };
+		8C6675B62C0E8012003EA7F5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6675B52C0E8012003EA7F5 /* SDWebImage */; };
+		8C6675B82C0E91EE003EA7F5 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6675B72C0E91EE003EA7F5 /* GrabarAudioViewController.swift */; };
 		8CAFBAFC2BFBF79100977A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFBAFB2BFBF79100977A0E /* AppDelegate.swift */; };
 		8CAFBAFE2BFBF79100977A0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFBAFD2BFBF79100977A0E /* SceneDelegate.swift */; };
 		8CAFBB032BFBF79100977A0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAFBB012BFBF79100977A0E /* Main.storyboard */; };
@@ -56,6 +60,10 @@
 		8C4315C02C054BB400CA10C8 /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
 		8C4315C42C05504C00CA10C8 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		8C4315C62C05559900CA10C8 /* RegistrarUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarUsuarioViewController.swift; sourceTree = "<group>"; };
+		8C6675AE2C0E7484003EA7F5 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		8C6675B02C0E7960003EA7F5 /* VerSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSnapViewController.swift; sourceTree = "<group>"; };
+		8C6675B32C0E7FB7003EA7F5 /* SDWebImage-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SDWebImage-master"; path = "../../../../Downloads/SDWebImage-master"; sourceTree = "<group>"; };
+		8C6675B72C0E91EE003EA7F5 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
 		8CAFBAF82BFBF79100977A0E /* ManzanoSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManzanoSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAFBAFB2BFBF79100977A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CAFBAFD2BFBF79100977A0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +104,7 @@
 				8CAFBB212BFC021200977A0E /* FirebaseAuthCombine-Community in Frameworks */,
 				8CAFBB3F2BFC021200977A0E /* FirebasePerformance in Frameworks */,
 				8CAFBB372BFC021200977A0E /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				8C6675B62C0E8012003EA7F5 /* SDWebImage in Frameworks */,
 				8CAFBB452BFC021200977A0E /* FirebaseStorage in Frameworks */,
 				8CAFBB292BFC021200977A0E /* FirebaseDynamicLinks in Frameworks */,
 				8CAFBB2D2BFC021200977A0E /* FirebaseFirestoreCombine-Community in Frameworks */,
@@ -111,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8C4315C42C05504C00CA10C8 /* Usuario.swift */,
+				8C6675AE2C0E7484003EA7F5 /* Snap.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -123,15 +133,34 @@
 				8C4315BE2C053DA600CA10C8 /* ImagenViewController.swift */,
 				8C4315C02C054BB400CA10C8 /* ElegirUsuarioViewController.swift */,
 				8C4315C62C05559900CA10C8 /* RegistrarUsuarioViewController.swift */,
+				8C6675B02C0E7960003EA7F5 /* VerSnapViewController.swift */,
+				8C6675B72C0E91EE003EA7F5 /* GrabarAudioViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8C6675B22C0E7FB7003EA7F5 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				8C6675B32C0E7FB7003EA7F5 /* SDWebImage-master */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		8C6675B42C0E8012003EA7F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8CAFBAEF2BFBF79100977A0E = {
 			isa = PBXGroup;
 			children = (
+				8C6675B22C0E7FB7003EA7F5 /* Packages */,
 				8CAFBAFA2BFBF79100977A0E /* ManzanoSnapchat */,
 				8CAFBAF92BFBF79100977A0E /* Products */,
+				8C6675B42C0E8012003EA7F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +234,7 @@
 				8CAFBB462BFC021200977A0E /* FirebaseStorageCombine-Community */,
 				8CAFBB4B2BFC0D6300977A0E /* GoogleSignIn */,
 				8CAFBB4D2BFC0D6300977A0E /* GoogleSignInSwift */,
+				8C6675B52C0E8012003EA7F5 /* SDWebImage */,
 			);
 			productName = ManzanoSnapchat;
 			productReference = 8CAFBAF82BFBF79100977A0E /* ManzanoSnapchat.app */;
@@ -267,8 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4315BD2C0538B000CA10C8 /* SnapsViewController.swift in Sources */,
+				8C6675B82C0E91EE003EA7F5 /* GrabarAudioViewController.swift in Sources */,
 				8C4315C72C05559900CA10C8 /* RegistrarUsuarioViewController.swift in Sources */,
+				8C6675AF2C0E7484003EA7F5 /* Snap.swift in Sources */,
 				8C4315BF2C053DA600CA10C8 /* ImagenViewController.swift in Sources */,
+				8C6675B12C0E7960003EA7F5 /* VerSnapViewController.swift in Sources */,
 				8C4315C52C05504C00CA10C8 /* Usuario.swift in Sources */,
 				8CAFBB492BFC06E700977A0E /* IniciarSesionViewController.swift in Sources */,
 				8CAFBAFC2BFBF79100977A0E /* AppDelegate.swift in Sources */,
@@ -516,6 +549,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8C6675B52C0E8012003EA7F5 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SDWebImage;
+		};
 		8CAFBB122BFC021200977A0E /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8CAFBB112BFC021200977A0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -82,15 +82,79 @@
             </objects>
             <point key="canvasLocation" x="23" y="84"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="yh4-Iq-2jl">
+            <objects>
+                <viewController id="w3G-Xr-uf1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nSa-H9-D27">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQv-13-27X">
+                                <rect key="frame" x="82" y="76" width="250" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Gvi-pc-Tcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyp-dW-C8m">
+                                <rect key="frame" x="132" y="129" width="150" height="60"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="pH9-7q-red"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Reproducir audio">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aOj-uk-EFz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EQv-13-27X" firstAttribute="centerX" secondItem="nSa-H9-D27" secondAttribute="centerX" id="09c-El-cZD"/>
+                            <constraint firstItem="Kyp-dW-C8m" firstAttribute="top" secondItem="EQv-13-27X" secondAttribute="bottom" constant="30" id="Knk-aL-VXL"/>
+                            <constraint firstItem="EQv-13-27X" firstAttribute="top" secondItem="aOj-uk-EFz" secondAttribute="top" constant="20" id="pqS-YT-uY1"/>
+                            <constraint firstItem="Kyp-dW-C8m" firstAttribute="centerX" secondItem="nSa-H9-D27" secondAttribute="centerX" id="wEh-pv-afy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6rp-hI-85z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eww-bs-PwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="-602"/>
+        </scene>
         <!--Snaps View Controller-->
         <scene sceneID="7aK-Pn-HsH">
             <objects>
-                <viewController id="A4k-NH-47i" customClass="SnapsViewController" customModule="ManzanoSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="A4k-NH-47i" customClass="SnapsViewController" customModule="ManzanoSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Int-To-pM6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tZ6-YS-lsf">
+                                <rect key="frame" x="0.0" y="56" width="414" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fRI-yx-ClU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fRI-yx-ClU" firstAttribute="trailing" secondItem="tZ6-YS-lsf" secondAttribute="trailing" id="Fbh-cM-glz"/>
+                            <constraint firstItem="tZ6-YS-lsf" firstAttribute="top" secondItem="fRI-yx-ClU" secondAttribute="top" id="mVu-co-puw"/>
+                            <constraint firstItem="fRI-yx-ClU" firstAttribute="bottom" secondItem="tZ6-YS-lsf" secondAttribute="bottom" id="quG-aR-OPK"/>
+                            <constraint firstItem="tZ6-YS-lsf" firstAttribute="leading" secondItem="fRI-yx-ClU" secondAttribute="leading" id="wR8-Dw-Uym"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nVG-Rh-NgG">
@@ -106,6 +170,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tablaSnaps" destination="tZ6-YS-lsf" id="Ig2-PY-aSD"/>
+                        <segue destination="nhw-rg-3SW" kind="show" identifier="versnapsegue" id="PHI-zd-6c9"/>
+                        <segue destination="w3G-Xr-uf1" kind="show" id="BZd-1D-rad"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFu-69-4Aw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,16 +212,40 @@
                                     <action selector="elegirContactoTapped:" destination="ah6-lS-WkM" eventType="touchUpInside" id="pJ5-Cw-9Gf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-0l-ehh">
+                                <rect key="frame" x="87" y="327" width="240" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2xR-ZM-kve"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Enviar audio">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="KfJ-Bl-KXx" kind="show" identifier="grabarAudioSegue" id="c46-70-vcu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="knb-X6-omj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uf7-Eg-z9P" firstAttribute="top" secondItem="TG9-Pg-IrS" secondAttribute="bottom" constant="20" id="48K-Zr-P9B"/>
                             <constraint firstItem="TG9-Pg-IrS" firstAttribute="top" secondItem="qDa-1P-slJ" secondAttribute="bottom" constant="15" id="A3r-gd-45o"/>
+                            <constraint firstItem="gcz-0l-ehh" firstAttribute="leading" secondItem="knb-X6-omj" secondAttribute="leading" constant="87" id="Bo5-RZ-uew"/>
                             <constraint firstItem="qDa-1P-slJ" firstAttribute="centerX" secondItem="Hn7-wG-ooa" secondAttribute="centerX" id="IYO-Xb-K90"/>
                             <constraint firstItem="uf7-Eg-z9P" firstAttribute="centerX" secondItem="Hn7-wG-ooa" secondAttribute="centerX" id="OFr-zU-DUU"/>
                             <constraint firstItem="qDa-1P-slJ" firstAttribute="width" secondItem="TG9-Pg-IrS" secondAttribute="width" id="QZc-oX-Rt2"/>
                             <constraint firstItem="TG9-Pg-IrS" firstAttribute="centerX" secondItem="Hn7-wG-ooa" secondAttribute="centerX" id="ZpD-y0-p9B"/>
+                            <constraint firstItem="gcz-0l-ehh" firstAttribute="top" secondItem="uf7-Eg-z9P" secondAttribute="bottom" constant="20" id="aYN-Ns-iBG"/>
+                            <constraint firstItem="knb-X6-omj" firstAttribute="trailing" secondItem="gcz-0l-ehh" secondAttribute="trailing" constant="87" id="iA9-mo-6Vi"/>
                             <constraint firstItem="TG9-Pg-IrS" firstAttribute="width" secondItem="uf7-Eg-z9P" secondAttribute="width" id="rOA-15-m0p"/>
                             <constraint firstItem="qDa-1P-slJ" firstAttribute="top" secondItem="knb-X6-omj" secondAttribute="top" constant="20" id="tB0-gZ-brS"/>
                         </constraints>
@@ -320,6 +413,167 @@
             </objects>
             <point key="canvasLocation" x="765" y="84"/>
         </scene>
+        <!--Ver Snap View Controller-->
+        <scene sceneID="JJi-LQ-Tbh">
+            <objects>
+                <viewController id="nhw-rg-3SW" customClass="VerSnapViewController" customModule="ManzanoSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vae-9N-Hob">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t2r-xU-hDL">
+                                <rect key="frame" x="20" y="66" width="205" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensaje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXn-yy-9I2">
+                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplo mensaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1f-6Q-SRM">
+                                        <rect key="frame" x="76.5" y="0.0" width="128.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagen Enviada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1y-Me-Olc">
+                                <rect key="frame" x="20" y="111" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TPf-53-rRZ">
+                                <rect key="frame" x="20" y="151.5" width="374" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="E6u-nv-8di"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aXu-wi-IZr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t2r-xU-hDL" firstAttribute="top" secondItem="aXu-wi-IZr" secondAttribute="top" constant="10" id="2Yp-6S-sLv"/>
+                            <constraint firstItem="aXu-wi-IZr" firstAttribute="trailing" secondItem="TPf-53-rRZ" secondAttribute="trailing" constant="20" id="W91-au-MzK"/>
+                            <constraint firstItem="j1y-Me-Olc" firstAttribute="centerX" secondItem="TPf-53-rRZ" secondAttribute="centerX" id="WGZ-59-gx6"/>
+                            <constraint firstItem="j1y-Me-Olc" firstAttribute="leading" secondItem="aXu-wi-IZr" secondAttribute="leading" constant="20" id="ZZq-5J-X7L"/>
+                            <constraint firstItem="TPf-53-rRZ" firstAttribute="leading" secondItem="aXu-wi-IZr" secondAttribute="leading" constant="20" id="anY-Rr-3B6"/>
+                            <constraint firstItem="TPf-53-rRZ" firstAttribute="top" secondItem="j1y-Me-Olc" secondAttribute="bottom" constant="20" id="b2C-Fr-zmT"/>
+                            <constraint firstItem="j1y-Me-Olc" firstAttribute="top" secondItem="H1f-6Q-SRM" secondAttribute="bottom" constant="24.5" id="baz-NC-nLk"/>
+                            <constraint firstItem="t2r-xU-hDL" firstAttribute="leading" secondItem="aXu-wi-IZr" secondAttribute="leading" constant="20" id="vKr-aD-APQ"/>
+                            <constraint firstItem="aXu-wi-IZr" firstAttribute="trailing" secondItem="j1y-Me-Olc" secondAttribute="trailing" constant="20" id="xCr-pY-jCT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VvB-Em-8xr"/>
+                    <connections>
+                        <outlet property="imageView" destination="TPf-53-rRZ" id="4Vd-ZI-jR0"/>
+                        <outlet property="lblMensaje" destination="H1f-6Q-SRM" id="yUh-qe-SyQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnI-Pg-vDP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="786"/>
+        </scene>
+        <!--Grabar Audio View Controller-->
+        <scene sceneID="9tG-Ux-iOL">
+            <objects>
+                <viewController id="KfJ-Bl-KXx" customClass="GrabarAudioViewController" customModule="ManzanoSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EWv-px-tY0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-Yq-0PG">
+                                <rect key="frame" x="126" y="76" width="162" height="35"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Grabar audio">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="grabarAudioTapped:" destination="KfJ-Bl-KXx" eventType="touchUpInside" id="BjK-18-8UW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kea-3n-MKX">
+                                <rect key="frame" x="126" y="131" width="162" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Reproducir audio">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reproducirAudioTapped:" destination="KfJ-Bl-KXx" eventType="touchUpInside" id="XoK-om-Deu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcy-XF-wKf">
+                                <rect key="frame" x="87" y="240" width="240" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Elegir Contacto">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="elegirContactoTapped:" destination="KfJ-Bl-KXx" eventType="touchUpInside" id="vql-wN-Jse"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPg-AO-5IE">
+                                <rect key="frame" x="87" y="186" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rsi-ik-qQv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kea-3n-MKX" firstAttribute="centerX" secondItem="EWv-px-tY0" secondAttribute="centerX" id="9MC-TW-Ijb"/>
+                            <constraint firstItem="sPg-AO-5IE" firstAttribute="leading" secondItem="rsi-ik-qQv" secondAttribute="leading" constant="87" id="DX3-ha-6pX"/>
+                            <constraint firstItem="p4g-Yq-0PG" firstAttribute="centerX" secondItem="EWv-px-tY0" secondAttribute="centerX" id="IQr-2s-pNQ"/>
+                            <constraint firstItem="sPg-AO-5IE" firstAttribute="top" secondItem="kea-3n-MKX" secondAttribute="bottom" constant="20" id="S8q-wv-U5S"/>
+                            <constraint firstItem="Qcy-XF-wKf" firstAttribute="leading" secondItem="rsi-ik-qQv" secondAttribute="leading" constant="87" id="WWF-CM-d7G"/>
+                            <constraint firstItem="rsi-ik-qQv" firstAttribute="trailing" secondItem="Qcy-XF-wKf" secondAttribute="trailing" constant="87" id="jKw-Iv-7io"/>
+                            <constraint firstItem="rsi-ik-qQv" firstAttribute="trailing" secondItem="sPg-AO-5IE" secondAttribute="trailing" constant="87" id="lVN-n7-T9g"/>
+                            <constraint firstItem="Qcy-XF-wKf" firstAttribute="top" secondItem="sPg-AO-5IE" secondAttribute="bottom" constant="20" id="nRp-WN-xHf"/>
+                            <constraint firstItem="p4g-Yq-0PG" firstAttribute="leading" secondItem="rsi-ik-qQv" secondAttribute="leading" constant="126" id="ozN-Cp-AsA"/>
+                            <constraint firstItem="kea-3n-MKX" firstAttribute="top" secondItem="p4g-Yq-0PG" secondAttribute="bottom" constant="20" id="rZZ-8f-gp7"/>
+                            <constraint firstItem="p4g-Yq-0PG" firstAttribute="top" secondItem="rsi-ik-qQv" secondAttribute="top" constant="20" id="tJs-8P-wy9"/>
+                            <constraint firstItem="rsi-ik-qQv" firstAttribute="trailing" secondItem="p4g-Yq-0PG" secondAttribute="trailing" constant="126" id="zXb-WW-0cw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SOW-jT-wuW"/>
+                    <connections>
+                        <outlet property="ElegirContactoButton" destination="Qcy-XF-wKf" id="Za5-uj-sw4"/>
+                        <outlet property="GrabarAudioButton" destination="p4g-Yq-0PG" id="VuY-ZM-61D"/>
+                        <outlet property="ReproducirAudioButton" destination="kea-3n-MKX" id="JhP-jJ-MSo"/>
+                        <outlet property="tituloLabel" destination="sPg-AO-5IE" id="y17-ao-rxR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOD-8i-nxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2292.753623188406" y="784.82142857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="imagen" width="200" height="166"/>
@@ -332,6 +586,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
